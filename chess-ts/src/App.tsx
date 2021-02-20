@@ -1,25 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+// components
+import { MobileApp, TabletApp, DesktopApp } from './components';
+const Chess = require('chess.js')
 
 function App() {
+  const chess: any = new Chess();
+  console.log(window.innerWidth)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+
+
+      {/* ternary designed to render specific components based on viewport width. I did it this way because the chessboardjsx library only allows you to adjust the size of the board with the width prop. this allows me to customize each component based on its relationship to the viewport size */}
+      {(window.innerWidth < 768) 
+      ? (<MobileApp />) : ((window.innerWidth > 760) && (window.innerWidth < 992)) 
+      ? (<TabletApp />) : (<DesktopApp />) }
+    </main>
   );
 }
 
