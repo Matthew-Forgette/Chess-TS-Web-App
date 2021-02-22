@@ -29,13 +29,13 @@ server.use((req, res, next) => {
 const { client } = require('./db/client');
 
 // connect to the server
-const PORT = process.env.PORT || 5433;
+const PORT = process.env.PORT || 5432;
 server.listen(PORT, async () => {
-    console.log(`Server is running on ${PORT}!`, process.env.D);
+    console.log(`Server is running on ${PORT}!`);
 
     try {
         await client.connect();
-        console.log('Database is open for business!')
+        console.log('Database is temporarily closed for business! hh')
     } catch (error) {
         console.error('Database is closed for repairs!\n', error)
     }
