@@ -3,6 +3,7 @@ const DB_NAME = 'localhost:5432/chess-ts';
 const DB_URL = process.env.DATABASE_URL || `postgres://${DB_NAME}`;
 const client = new Client(DB_URL);
 
+
 module.exports = {
     client
 }
