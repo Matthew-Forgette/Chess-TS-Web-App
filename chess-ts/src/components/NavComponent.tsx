@@ -9,14 +9,23 @@ import { navList } from './NavList';
 import { SingleNavLink } from './SingleNavLink';
 
 
+interface NavListItem {
+    name: string,
+    path: string,
+    image?: string,
+    alt?: string,
+    icon?: JSX.Element
+}
+
 
 export const NavComponent = () => {
 
     return (
         <Router>
-            <div className='nav'>
+            <div className='nav-d nav-t nav-m'> 
+            {/*three class names to avoid style overlaps for components */}
 
-                {navList.map((item: any, index: number) => {
+                {navList.map((item: NavListItem, index: number) => {
                     return (
                         <SingleNavLink {...item} key={index}/>
                     )
