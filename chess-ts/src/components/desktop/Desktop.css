@@ -1,4 +1,4 @@
-.nav {
+.nav-d {
   position: fixed;
   left: 0;
   top: 0;
@@ -13,29 +13,29 @@
   background-color: #101620dc;
 }
 
-.nav a {
+.nav-d a {
   text-decoration: none !important;
   color: white;
   font-size: 32px;
   transition: 0.15s ease-in;
 }
 
-.nav a:hover {
+.nav-d a:hover {
   transform: scale(1.15);
   transition: 0.175s ease-out;
 }
 
-.nav img {
+.nav-d img {
   max-width: 50px;
   margin: -10px 0;
 }
 
 /* these next two lines adds margin to only the first and last Link Component */
-.nav a:first-child {
+.nav-d a:first-child {
   margin-top: 20px;
 }
 
-.nav a:last-child {
+.nav-d a:last-child {
   margin-bottom: 20px;
 }
 
@@ -43,3 +43,7 @@
 .profile-icon {
   margin-left: -5px !important;
 }
+
+/* mobile media query area */
+
+/* tablet media query area */

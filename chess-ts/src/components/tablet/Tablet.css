@@ -1,0 +1,42 @@
+.nav-t {
+  position: fixed;
+
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+
+  height: 100vh;
+  width: 50px;
+  background-color: #101620dc;
+}
+
+.nav-t a {
+  text-decoration: none !important;
+  color: white;
+  font-size: 32px;
+  transition: 0.15s ease-in;
+}
+
+.nav-t a:hover {
+  transform: scale(1.15);
+  transition: 0.175s ease-out;
+}
+
+.nav-t img {
+  max-width: 50px;
+  margin: -10px 0;
+}
+
+/* these next two lines adds margin to only the first and last Link Component */
+.nav-t a:first-child {
+  margin-top: 20px;
+}
+
+.nav-t a:last-child {
+  margin-bottom: 20px;
+}
+
+/* this specific icon looks about naturally off-kilter and this fixes it */
+.profile-icon {
+  margin-left: -5px !important;
+}
