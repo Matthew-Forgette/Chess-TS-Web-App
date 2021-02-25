@@ -45,6 +45,16 @@
   .nav a {
     margin: auto 10px;
   }
+
+  /* these next two lines adds margin to only the first and last Link Component */
+  .nav a:first-child {
+    margin-left: 20px;
+    margin-right: -10px;
+  }
+  .nav a:last-child {
+    margin-right: 20px;
+    margin-left: -10px;
+  }
 }
 
 /* 
@@ -76,5 +86,5 @@
 }
 /* class that will be dynamically toggled and will change the active nav style */
 .nav-active {
-  background-color: yellowgreen !important;
+  color: rgba(255, 0, 106, 0.664) !important;
 }

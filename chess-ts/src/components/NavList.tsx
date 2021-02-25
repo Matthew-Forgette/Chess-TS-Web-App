@@ -2,6 +2,7 @@ import { AiOutlineHome } from 'react-icons/ai'
 import { RiInformationLine } from 'react-icons/ri'
 import { FiSettings } from 'react-icons/fi'
 import { BiLogIn } from 'react-icons/bi'
+import { GiTabletopPlayers } from 'react-icons/gi'
 
 
 export const navList: {
@@ -19,7 +20,7 @@ export const navList: {
     {
         name: 'Play',
         path: '/play',
-        image: '/assets/images/pawn-icon.svg',
+        icon: <GiTabletopPlayers />,
         alt: 'Chess Pawn Icon takes you to /play'
 
     },
