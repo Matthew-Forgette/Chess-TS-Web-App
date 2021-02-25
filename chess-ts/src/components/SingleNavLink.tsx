@@ -4,25 +4,43 @@ import {
 } from 'react-router-dom'
 
 interface SingleNavLinkProps {
-    key: number,
+    active: number,
+    setActive: React.Dispatch<React.SetStateAction<number>>,
+    index: number,
     name: string,
     path: string,
     image?: string,
     alt?: string,
-    icon?: JSX.Element 
+    icon?: JSX.Element,
+    onClick?: () => void
+
 }
 
 export const SingleNavLink = (props: React.PropsWithChildren<SingleNavLinkProps>) => {
     const { 
         name,
+        index,
         path,
         image,
         alt,
-        icon
+        icon,
+        active,
+        setActive
     } = props
 
+    const handleActive = (index: number) => {
+        console.log('getting into handle active funtcion');
+        const newActive:number = index
+        setActive(newActive)
+        console.log(newActive, 'active yay');
+    }
+
     return (
-        <Link to={path}>
+        <Link 
+        to={path}
+        onClick={()=>handleActive(index)}
+        className={active === index ? 'nav-active' : ''}
+        >
             {/* ternary that renders the react-icon unless an svg is needed instead */}
             {image ? (<img src={image} alt={alt} />) : icon}
         </Link>
