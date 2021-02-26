@@ -13,3 +13,95 @@ main {
   height: 100vh;
   width: 100vw;
 }
+
+/* css that was created before simplifying and deleting some components feb-25-21 */
+/* all of the css that should only be applied on desktop */
+@media (min-width: 1025px) {
+  .nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+
+    height: 100vh;
+    width: 50px;
+    background-color: #101620dc;
+  }
+
+  /* these next two lines adds margin to only the first and last Link Component */
+  .nav a:first-child {
+    margin-top: 20px;
+  }
+  .nav a:last-child {
+    margin-bottom: 20px;
+  }
+}
+
+/* all of the css that should be applied on tablet or mobile(since they're the same) */
+@media (max-width: 1024px) {
+  .nav {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+    margin: auto;
+
+    height: 50px;
+    width: 100%;
+    background-color: #101620dc;
+  }
+
+  .nav a {
+    margin: auto 10px;
+  }
+
+  /* these next two lines adds margin to only the first and last Link Component */
+  .nav a:first-child {
+    margin-left: 20px;
+    margin-right: -10px;
+  }
+  .nav a:last-child {
+    margin-right: 20px;
+    margin-left: -10px;
+  }
+}
+
+/* 
+ ----------
+ the code below are styles that should be present on all machines 
+ ----------
+ */
+
+/* styles the nav icons */
+.nav a {
+  text-decoration: none !important;
+  color: rgba(255, 255, 255, 0.904);
+  font-size: 32px;
+  transition: 0.15s ease-in;
+}
+/* nav icon hover */
+.nav a:hover {
+  transform: scale(1.15);
+  transition: 0.175s ease-out;
+}
+/* nav icon size and position */
+.nav img {
+  max-width: 50px;
+  margin: -10px 0;
+}
+/* this specific icon looks about naturally off-kilter and this fixes it */
+.profile-icon {
+  margin-left: -5px !important;
+}
+/* class that will be dynamically toggled and will change the active nav style */
+.nav-active {
+  color: rgba(255, 0, 106, 0.664) !important;
+}
