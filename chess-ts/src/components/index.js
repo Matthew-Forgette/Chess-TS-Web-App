@@ -4,14 +4,20 @@
 export { default as App } from '../App';
 
 // Nav Component
-export { NavComponent } from './NavComponent';
+export { NavComponent } from './nav/NavComponent';
 
-// Mobile Gameboard
-export { MobileApp } from './mobile/MobileApp'
+// MAIN COMPONENTS
+// About 
+export { About } from './main/About';
 
-// Tablet App
-export { TabletApp } from './tablet/TabletApp'
+// Home
+export { Home } from './main/Home';
 
+// Play
+export { Play } from './main/Play';
 
-// Desktop App
-export { DesktopApp } from './desktop/DesktopApp'
+// Profile
+export { Profile } from './main/Profile';
+
+// Settings
+export { Settings } from './main/Settings';
